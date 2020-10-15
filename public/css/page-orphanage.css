@@ -7,13 +7,16 @@ main {
   flex: 1;
 }
 
-/*details*/
+/* details */
+
 .orphanage-details {
   width: 70rem;
   margin: 6.4rem auto;
   background: white;
-  border: 1px solid #d3e3e5;
+  border: 1px solid #d3e2e5;
+
   border-radius: 2rem;
+
   overflow: hidden;
 }
 
@@ -27,7 +30,7 @@ main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1.6rem;
-  margin: 16px 40px o;
+  margin: 16px 40px 0;
 }
 
 .images button {
@@ -39,8 +42,10 @@ main {
   border-radius: 2rem;
 
   overflow: hidden;
+
   opacity: 0.6;
-  transition: 200ms;
+
+  transition: opacity 0.2s;
 }
 
 .images button:hover,
@@ -54,19 +59,20 @@ main {
   object-fit: cover;
 }
 
-.images-details-content {
+/* orphanage-details-content */
+.orphanage-details-content {
   padding: 8rem;
 }
 
-.images-details-content h1 {
+.orphanage-details-content h1 {
   color: #4d6f80;
   font-size: 5.4rem;
   line-height: 1.5;
   margin-bottom: 0.8rem;
 }
 
-.images-details-content p {
-  line-height: 1.5;
+.orphanage-details-content p {
+  line-height: 1.6;
   color: #5c8599;
   margin-top: 2.4rem;
 }
@@ -74,8 +80,11 @@ main {
 .orphanage-details-content hr {
   width: 100%;
   height: 1px;
+
   border: 0;
+
   background: #d3e2e6;
+
   margin: 6.4rem 0;
 }
 
@@ -87,13 +96,14 @@ main {
 
 .open-details {
   margin-top: 2.4rem;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
 }
 
 .open-details div {
-  padding: 3.4rem 2.4rem;
+  padding: 3.2rem 2.4rem;
 }
 
 .open-details img {
@@ -105,6 +115,7 @@ main {
   background: linear-gradient(149.97deg, #e6f7fb 8.13%, #ffffff 92.67%);
   border: 1px solid #b3dae2;
   border-radius: 20px;
+
   color: #5c8599;
 }
 
@@ -112,5 +123,6 @@ main {
   background: linear-gradient(154.16deg, #edfff6 7.85%, #ffffff 91.03%);
   border: 1px solid #a1e9c5;
   border-radius: 20px;
+
   color: #37c77f;
 }
