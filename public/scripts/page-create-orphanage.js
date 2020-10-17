@@ -74,3 +74,30 @@ validate = (event) => {
   event.preventDefault();
   alert("Selecione um ponto no mapa");
 };
+
+//
+
+const fields = document.querySelectorAll("[required]");
+
+function customValidation(event) {
+  let field = event.target;
+  function verifyErrors() {
+    let foundError = false;
+
+    for (let error in field.validity) {
+      if (error !== "customError" && field.validity[error]) {
+        foundError = true;
+      }
+    }
+    return foundError;
+  }
+
+  const error = verifyErrors();
+  error
+    ? field.setCustomValidity("Esse campo está vazio")
+    : field.setCustomValidity("");
+}
+
+for (let field of fields) {
+  field.addEventListener("invalid", customValidation);
+}
