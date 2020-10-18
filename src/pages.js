@@ -10,18 +10,13 @@ module.exports = {
   async orphanage(req, res) {
     try {
       const id = req.query.id;
-      console.log(id);
       const db = await Database;
       const result = await db.all(`SELECT * FROM orphanages WHERE id="${id}"`);
       orphanage = result[0];
-      console.log(orphanage);
       orphanage.images = orphanage.images.split(",");
       orphanage.firstImage = orphanage.images[0];
       orphanage.open_on_weekends =
         orphanage.open_on_weekends === "0" ? false : true;
-
-      console.log(orphanage.open_on_weekends);
-      console.log(orphanage);
       return res.render("orphanage", { orphanage });
     } catch (erro) {
       return res.send("Erro no banco de dados");

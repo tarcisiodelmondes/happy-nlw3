@@ -18,5 +18,4 @@ Database.then(async (db) => {
     opening_hours: "Horário de visitas Das 18h até 8h",
     open_on_weekends: "0",
   });
-  const orphanages = await db.all("SELECT * FROM orphanages");
 });
