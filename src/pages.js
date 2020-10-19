@@ -1,4 +1,3 @@
-const orphanages = require("./database/fakedata.js");
 const Database = require("./database/db");
 const saveOrphanage = require("./database/saveOrphanage");
 
