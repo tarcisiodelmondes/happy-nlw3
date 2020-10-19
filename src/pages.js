@@ -16,7 +16,7 @@ module.exports = {
       orphanage.firstImage = orphanage.images[0];
       orphanage.open_on_weekends =
         orphanage.open_on_weekends === "0" ? false : true;
-      return res.render("/orphanage", { orphanage });
+      return res.render("orphanage", { orphanage });
     } catch (erro) {
       return res.send("Erro no banco de dados");
     }
@@ -34,7 +34,7 @@ module.exports = {
   },
 
   createOrphanages(req, res) {
-    return res.render("/create-orphanage");
+    return res.render("create-orphanage");
   },
 
   async saveOrphanage(req, res) {
@@ -54,7 +54,7 @@ module.exports = {
         open_on_weekends: fields.open_on_weekends,
       });
 
-      return res.redirect("/orphanages");
+      return res.redirect("orphanages");
     } catch (error) {
       console.log(error);
       return res.send("Aconteceu um erro no nosso sistema");
