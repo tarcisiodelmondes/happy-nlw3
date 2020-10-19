@@ -15,4 +15,8 @@ server
   .get("/create-orphanage", pages.createOrphanages)
   .post("/save-orphanage", pages.saveOrphanage);
 
-server.listen(5500);
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+server.listen(port);
